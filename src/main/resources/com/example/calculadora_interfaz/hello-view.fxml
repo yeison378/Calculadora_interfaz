@@ -5,11 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora_interfaz.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora_interfaz.HelloController">
    <children>
-      <TextField fx:id="pantallaUno" layoutX="39.0" layoutY="33.0" prefHeight="60.0" prefWidth="292.0" />
-      <TextField fx:id="PantallaDos" layoutX="39.0" layoutY="93.0" prefHeight="60.0" prefWidth="292.0" />
+      <TextField fx:id="pantallaUno" alignment="BOTTOM_RIGHT" layoutX="39.0" layoutY="33.0" prefHeight="60.0" prefWidth="292.0">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <TextField fx:id="PantallaDos" alignment="BOTTOM_RIGHT" layoutX="39.0" layoutY="93.0" prefHeight="60.0" prefWidth="292.0">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
       <Button layoutX="39.0" layoutY="231.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="7" />
       <Button layoutX="114.0" layoutY="231.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="8" />
       <Button layoutX="190.0" layoutY="231.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="9" />
@@ -60,7 +65,7 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="114.0" layoutY="380.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text=",">
+      <Button layoutX="114.0" layoutY="380.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text=".">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
