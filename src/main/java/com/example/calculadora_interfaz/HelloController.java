@@ -38,8 +38,12 @@ public class HelloController implements Initializable {
 
 
     @FXML
-    private Button siete, ocho, nueve, cuatro, cinco, seis, uno, dos, tres, cero, parentesisA, parentesisC, por, dividido, mas, menos, potencia, punto, porciento, c, ce,borrar;
+    private Button cerrar,siete, ocho, nueve, cuatro, cinco, seis, uno, dos, tres, cero, parentesisA, parentesisC, por, dividido, mas, menos, potencia, punto, porciento, c, ce,borrar;
 
+    @FXML
+    public void cerrar(ActionEvent event) {
+        System.exit(0);
+    }
 
     @FXML
     public void operar(ActionEvent event) {
