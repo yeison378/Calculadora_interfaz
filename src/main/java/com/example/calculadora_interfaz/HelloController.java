@@ -36,16 +36,81 @@ public class HelloController implements Initializable {
     @FXML
     private Button igual;
 
+
+    @FXML
+    private Button siete, ocho, nueve, cuatro, cinco, seis, uno, dos, tres, cero, parentesisA, parentesisC, por, dividido, mas, menos, potencia, punto, porciento,c,ce;
+
+
     @FXML
     public void operar(ActionEvent event) {
         try {
             expresion = pantallaUno.getText();
-           expresion = ""+analizador.evaluar(expresion);
+            expresion = "" + analizador.evaluar(expresion);
             PantallaDos.setText(expresion);
 
-        }catch(Excepciones exc) {
-            expresion = ""+exc;
+        } catch (Excepciones exc) {
+            expresion = "" + exc;
             PantallaDos.setText(expresion);
         }
+    }
+    public void resultado(){
+        try {
+            expresion = pantallaUno.getText();
+            expresion = "" + analizador.evaluar(expresion);
+            PantallaDos.setText(expresion);
+
+        } catch (Excepciones exc) {
+            expresion = "" + exc;
+            PantallaDos.setText(expresion);
+        }
+    }
+
+    @FXML
+    void teclado(ActionEvent event) {
+        Object boton = event.getSource();
+        if(boton.equals(uno)){
+            pantallaUno.setText(pantallaUno.getText()+"1");
+        }else if(boton.equals(dos)){
+            pantallaUno.setText(pantallaUno.getText()+"2");
+        }else if(boton.equals(tres)){
+            pantallaUno.setText(pantallaUno.getText()+"3");
+        }else if(boton.equals(cuatro)){
+            pantallaUno.setText(pantallaUno.getText()+"4");
+        }else if(boton.equals(cinco)){
+            pantallaUno.setText(pantallaUno.getText()+"5");
+        }else if(boton.equals(seis)){
+            pantallaUno.setText(pantallaUno.getText()+"6");
+        }else if(boton.equals(siete)){
+            pantallaUno.setText(pantallaUno.getText()+"7");
+        }else if(boton.equals(ocho)){
+            pantallaUno.setText(pantallaUno.getText()+"8");
+        }else if(boton.equals(nueve)){
+            pantallaUno.setText(pantallaUno.getText()+"9");
+        }else if(boton.equals(cero)){
+            pantallaUno.setText(pantallaUno.getText()+"0");
+        }else if(boton.equals(punto)){
+            pantallaUno.setText(pantallaUno.getText()+".");
+        }else if(boton.equals(parentesisA)){
+            pantallaUno.setText(pantallaUno.getText()+"(");
+        }else if(boton.equals(parentesisC)){
+            pantallaUno.setText(pantallaUno.getText()+")");
+        }else if(boton.equals(porciento)){
+            pantallaUno.setText(pantallaUno.getText()+"%");
+        }else if(boton.equals(potencia)){
+            pantallaUno.setText(pantallaUno.getText()+"^");
+        }else if(boton.equals(por)){
+            pantallaUno.setText(pantallaUno.getText()+"*");
+        }else if(boton.equals(dividido)){
+            pantallaUno.setText(pantallaUno.getText()+"/");
+        }else if(boton.equals(mas)){
+            pantallaUno.setText(pantallaUno.getText()+"+");
+        }else if(boton.equals(menos)){
+            pantallaUno.setText(pantallaUno.getText()+"-");
+        }else if(boton.equals(c)){
+            pantallaUno.setText("");
+        }else if(boton.equals(ce)){
+            pantallaUno.setText("");
+        }
+        resultado();
     }
 }

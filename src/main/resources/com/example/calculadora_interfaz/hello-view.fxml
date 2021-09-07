@@ -5,72 +5,117 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora_interfaz.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora_interfaz.HelloController">
    <children>
-      <TextField fx:id="pantallaUno" alignment="BOTTOM_RIGHT" layoutX="39.0" layoutY="33.0" prefHeight="60.0" prefWidth="292.0">
+      <TextField fx:id="pantallaUno" alignment="TOP_RIGHT" layoutX="39.0" layoutY="64.0" prefHeight="87.0" prefWidth="292.0" text="8+2">
          <font>
             <Font size="22.0" />
          </font></TextField>
-      <TextField fx:id="PantallaDos" alignment="BOTTOM_RIGHT" layoutX="39.0" layoutY="93.0" prefHeight="60.0" prefWidth="292.0">
+      <TextField fx:id="PantallaDos" alignment="BOTTOM_RIGHT" editable="false" layoutX="39.0" layoutY="105.0" prefHeight="42.0" prefWidth="292.0" style="-fx-background-color: transparent;">
          <font>
             <Font size="22.0" />
          </font></TextField>
-      <Button layoutX="39.0" layoutY="231.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="7" />
-      <Button layoutX="114.0" layoutY="231.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="8" />
-      <Button layoutX="190.0" layoutY="231.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="9" />
-      <Button layoutX="39.0" layoutY="281.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="4" />
-      <Button layoutX="114.0" layoutY="281.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="5" />
-      <Button layoutX="190.0" layoutY="281.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="6" />
-      <Button layoutX="39.0" layoutY="330.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="1" />
-      <Button layoutX="114.0" layoutY="330.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="2" />
-      <Button layoutX="190.0" layoutY="330.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="3" />
-      <Button layoutX="39.0" layoutY="380.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="0" />
-      <Button fx:id="igual" layoutX="265.0" layoutY="380.0" mnemonicParsing="false" onAction="#operar" prefHeight="42.0" prefWidth="68.0" text="=">
+      <Button fx:id="siete" layoutX="38.0" layoutY="277.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="7">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="ocho" layoutX="113.0" layoutY="277.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="8">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="nueve" layoutX="189.0" layoutY="277.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="9">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="cuatro" layoutX="38.0" layoutY="327.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="4">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="cinco" layoutX="113.0" layoutY="327.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="5">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="seis" layoutX="189.0" layoutY="327.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="6">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="uno" layoutX="38.0" layoutY="376.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="1">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="dos" layoutX="113.0" layoutY="376.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="2">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="tres" layoutX="189.0" layoutY="376.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="3">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="cero" layoutX="113.0" layoutY="426.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="0">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="igual" layoutX="264.0" layoutY="426.0" mnemonicParsing="false" onAction="#operar" prefHeight="42.0" prefWidth="68.0" text="=">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="39.0" layoutY="181.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="(">
+      <Button fx:id="parentesisA" layoutX="38.0" layoutY="227.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="(">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="114.0" layoutY="181.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text=")">
+      <Button fx:id="parentesisC" layoutX="113.0" layoutY="227.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text=")">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="265.0" layoutY="181.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="X">
+      <Button fx:id="por" layoutX="264.0" layoutY="227.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="X">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="265.0" layoutY="231.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="÷">
+      <Button fx:id="dividido" layoutX="264.0" layoutY="277.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="÷">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="265.0" layoutY="281.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="+">
+      <Button fx:id="mas" layoutX="264.0" layoutY="327.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="+">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="265.0" layoutY="330.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="-">
+      <Button fx:id="menos" layoutX="264.0" layoutY="376.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="-">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="190.0" layoutY="181.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="^">
+      <Button fx:id="potencia" layoutX="189.0" layoutY="227.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="^">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="114.0" layoutY="380.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text=".">
+      <Button fx:id="punto" layoutX="38.0" layoutY="426.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text=".">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="190.0" layoutY="380.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="68.0" text="\%">
+      <Button fx:id="porciento" layoutX="189.0" layoutY="426.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="\%">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="186.0" layoutY="174.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="145.0" text="&lt;-">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="ce" layoutX="113.0" layoutY="174.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="CE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="c" layoutX="38.0" layoutY="174.0" mnemonicParsing="false" onAction="#teclado" prefHeight="42.0" prefWidth="68.0" text="C">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
