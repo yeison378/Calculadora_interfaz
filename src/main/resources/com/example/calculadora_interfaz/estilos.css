@@ -4,7 +4,7 @@
 }
 
 .mainPane {
-    -fx-background-color: linear-gradient(to bottom right, #4158D0, #C850C0,#FFCC70);
+    -fx-background-color: linear-gradient(to bottom right, #08AEEA,#2AF598);
     /*-fx-background-color: linear-gradient(to bottom right, #f56e55, #c21e4a);*/
 
     /*-fx-background-color: linear-gradient(to bottom right, #FFE53B, #c21e4a);*/
@@ -14,6 +14,12 @@
 .highlight {
     -fx-background-color: #00000025;
     -fx-background-radius: 15;
+    -fx-text-fill: #FFFFFF;
+}
+
+.base {
+    -fx-background-color: #00000025;
+
     -fx-text-fill: #FFFFFF;
 }
 .button:hover {

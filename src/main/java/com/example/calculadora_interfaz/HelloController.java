@@ -25,6 +25,7 @@ public class HelloController implements Initializable {
         br = new BufferedReader(new InputStreamReader(System.in));
         analizador = new Analizador();
         expresion = "";
+        dec();
     }
 
     @FXML
@@ -36,13 +37,36 @@ public class HelloController implements Initializable {
     @FXML
     private Button igual;
 
+    @FXML
+    private Label base;
+
 
     @FXML
-    private Button cerrar,siete, ocho, nueve, cuatro, cinco, seis, uno, dos, tres, cero, parentesisA, parentesisC, por, dividido, mas, menos, potencia, punto, porciento, c, ce,borrar;
+    private Button bin,oct,dec,hex,cerrar,siete, ocho, nueve, cuatro, cinco, seis, uno, dos, tres, cero, parentesisA, parentesisC, por, dividido, mas, menos, potencia, punto, porciento, c, ce,borrar;
+    @FXML
+    private Button a,d,b,e,cc,f;
 
     @FXML
     public void cerrar(ActionEvent event) {
         System.exit(0);
+    }
+
+    @FXML
+    public void base(ActionEvent event) {
+        Object boton = event.getSource();
+        if (boton.equals(bin)) {
+            base.setText("BIN");
+            binario();
+        } else if (boton.equals(oct)) {
+            base.setText("OCT");
+            octal();
+        } else if (boton.equals(dec)) {
+            base.setText("DEC");
+            dec();
+        } else if (boton.equals(hex)) {
+            base.setText("HEX");
+            hexagecimal();
+        }
     }
 
     @FXML
@@ -70,6 +94,87 @@ public class HelloController implements Initializable {
         }
     }
 
+    public void dec(){
+        uno.setDisable(false);
+        dos.setDisable(false);
+        tres.setDisable(false);
+        cuatro.setDisable(false);
+        cinco.setDisable(false);
+        seis.setDisable(false);
+        siete.setDisable(false);
+        ocho.setDisable(false);
+        nueve.setDisable(false);
+        cero.setDisable(false);
+        punto.setDisable(false);
+
+        a.setDisable(true);
+        b.setDisable(true);
+        cc.setDisable(true);
+        d.setDisable(true);
+        e.setDisable(true);
+        f.setDisable(true);
+    }
+
+    public void octal(){
+        uno.setDisable(false);
+        dos.setDisable(false);
+        tres.setDisable(false);
+        cuatro.setDisable(false);
+        cinco.setDisable(false);
+        seis.setDisable(false);
+        siete.setDisable(false);
+        ocho.setDisable(false);
+        cero.setDisable(false);
+        punto.setDisable(false);
+
+        nueve.setDisable(true);
+        a.setDisable(true);
+        b.setDisable(true);
+        cc.setDisable(true);
+        d.setDisable(true);
+        e.setDisable(true);
+        f.setDisable(true);
+    }
+    public void binario(){
+        uno.setDisable(false);
+        cero.setDisable(false);
+        punto.setDisable(false);
+
+        dos.setDisable(true);
+        tres.setDisable(true);
+        cuatro.setDisable(true);
+        cinco.setDisable(true);
+        seis.setDisable(true);
+        siete.setDisable(true);
+        ocho.setDisable(true);
+        nueve.setDisable(true);
+        a.setDisable(true);
+        b.setDisable(true);
+        cc.setDisable(true);
+        d.setDisable(true);
+        e.setDisable(true);
+        f.setDisable(true);
+    }
+
+    public void hexagecimal(){
+        uno.setDisable(false);
+        dos.setDisable(false);
+        tres.setDisable(false);
+        cuatro.setDisable(false);
+        cinco.setDisable(false);
+        seis.setDisable(false);
+        siete.setDisable(false);
+        ocho.setDisable(false);
+        nueve.setDisable(false);
+        cero.setDisable(false);
+        punto.setDisable(false);
+        a.setDisable(false);
+        b.setDisable(false);
+        cc.setDisable(false);
+        d.setDisable(false);
+        e.setDisable(false);
+        f.setDisable(false);
+    }
     @FXML
     void teclado(ActionEvent event) {
         Object boton = event.getSource();

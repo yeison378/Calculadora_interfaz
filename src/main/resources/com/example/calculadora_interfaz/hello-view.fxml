@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,10 +11,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="364.0" styleClass="mainPane" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora_interfaz.HelloController">
    <children>
-      <TextField fx:id="pantallaUno" alignment="TOP_RIGHT" layoutX="37.0" layoutY="81.0" prefHeight="87.0" prefWidth="292.0" styleClass="highlight" stylesheets="@estilos.css">
+      <TextField fx:id="pantallaUno" alignment="TOP_RIGHT" layoutX="37.0" layoutY="81.0" prefHeight="87.0" prefWidth="292.0" styleClass="highlight" stylesheets="@estilos.css" text="5+2">
          <font>
             <Font size="22.0" />
-         </font></TextField>
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </TextField>
       <TextField fx:id="PantallaDos" alignment="BOTTOM_RIGHT" editable="false" layoutX="37.0" layoutY="122.0" prefHeight="42.0" prefWidth="292.0" style="-fx-background-color: transparent;" styleClass="highlight" stylesheets="@estilos.css">
          <font>
             <Font size="22.0" />
@@ -135,55 +143,44 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <RadioButton layoutX="39.0" layoutY="13.0" mnemonicParsing="false" text="BINARIA" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="39.0" layoutY="34.0" mnemonicParsing="false" text="OCTAL" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="130.0" layoutY="13.0" mnemonicParsing="false" text="DECIMAL" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="130.0" layoutY="34.0" mnemonicParsing="false" text="DECIMAL" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </RadioButton>
-      <Button fx:id="c1" layoutX="36.0" layoutY="191.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="A" textFill="WHITE">
+      <Button fx:id="a" layoutX="36.0" layoutY="191.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="A" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button fx:id="c11" layoutX="36.0" layoutY="221.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="D" textFill="WHITE">
+      <Button fx:id="d" layoutX="36.0" layoutY="221.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="D" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button fx:id="c13" layoutX="140.0" layoutY="191.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="B" textFill="WHITE">
+      <Button fx:id="b" layoutX="140.0" layoutY="191.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="B" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button fx:id="c112" layoutX="140.0" layoutY="221.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="E" textFill="WHITE">
+      <Button fx:id="e" layoutX="140.0" layoutY="221.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="E" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button fx:id="c131" layoutX="242.0" layoutY="191.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="C" textFill="WHITE">
+      <Button fx:id="cc" layoutX="242.0" layoutY="191.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="C" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button fx:id="c1121" layoutX="242.0" layoutY="221.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="F" textFill="WHITE">
+      <Button fx:id="f" layoutX="242.0" layoutY="221.0" mnemonicParsing="false" onAction="#teclado" prefHeight="22.0" prefWidth="86.0" styleClass="highlight" stylesheets="@estilos.css" text="F" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
+      <Label fx:id="base" layoutX="50.0" layoutY="81.0" text="DEC" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="bin" layoutX="168.0" layoutY="32.0" mnemonicParsing="false" onAction="#base" styleClass="base" stylesheets="@estilos.css" text="BIN" />
+      <Button fx:id="oct" layoutX="126.0" layoutY="32.0" mnemonicParsing="false" onAction="#base" styleClass="base" stylesheets="@estilos.css" text="OCT" />
+      <Button fx:id="dec" layoutX="84.0" layoutY="32.0" mnemonicParsing="false" onAction="#base" styleClass="base" stylesheets="@estilos.css" text="DEC" />
+      <Button fx:id="hex" layoutX="42.0" layoutY="32.0" mnemonicParsing="false" onAction="#base" styleClass="base" stylesheets="@estilos.css" text="HEX" />
    </children>
 </AnchorPane>
